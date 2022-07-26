@@ -1,0 +1,286 @@
+IRIS
+
+n_attr = 4
+ranges =  [[4.3,7.9],
+          [2,4.4],
+          [1,6.9],
+          [0.1,2.5]]
+n_clusters = 3
+eps = 0.9
+
+SOYBEAN
+
+n_attr = 35
+indexes_soybean = [24,26,30,31,33,32]
+soybean = pd.read_csv("soybean/soybean.csv")
+rules = associationRules.rules(soybean,0.7,1)
+ranges = ]["september", "august", "july", "october", "june", "may", "april"],
+         ["normal", "lt-normal"],
+         ["gt-norm", "norm", "lt-norm"],
+         ["gt-norm", "norm", "lt-norm"],
+         ["yes", "no"],
+         ["same-lst-sev-yrs", "same-lst-two-yrs", "same-lst-yr", "diff-lst-year"],
+         ["whole-field","low-areas","upper-areas","scattered"],
+         ["pot-severe", "minor", "severe"],
+         ["none","fungicide", "other"],
+         ["80-89","lt-80","90-100"],
+         ["norm", "abnorm"],
+         ["norm", "abnorm"],
+         ["no-yellow-halos","absent", "yellow-halos"],
+         ["w-s-marg", "dna", "no-w-s-marg"],
+         ["gt-1/8", "dna","lt-1/8"],
+         ["absent", "present"],
+         ["absent", "present"],
+         ["absent", "lower-surf", "upper-surf"],
+         ["norm", "abnorm"],
+         ["yes", "no"],
+         ["absent", "above-sec-nde","below-soil","above-soil"],
+         ["dna","dk-brown-blk","brown","tan"],
+         ["absent", "present"],
+         ["absent","firm-and-dry"],
+         ["absent", "present"],
+         ["none", "brown", "black"],
+         ["absent", "present"],
+         ["norm","diseased","dna"],
+         [ "absent","dna","colored", "brown-w/blk-specks"],
+         ["norm", "abnorm"],
+         ["absent", "present"],
+         ["absent", "present"],
+         ["norm", "lt-norm"],
+         ["absent", "present"],
+         ["norm","rotted","galls-cysts"]]
+
+MUSHROOMS
+
+n_attr = 22
+indexes = [5, 15, 16, 17]
+ranges = [["convex", "flat", "knobbed", "bell", "sunken", "conical"],
+          ["scaly", "smooth", "fibrous", "grooves"],
+          ["brown", "gray", "red", "yellow", "white", "buff", "pink", "cinnamon", "green", "purple"],
+          ["false", "true"],
+          ["none", "foul", "fishy", "spicy", "almond", "anise", "pungent", "creosote", "musty"],
+          ["free", "attached"],
+          ["close", "crowded"],
+          ["broad", "narrow"],
+          ["buff", "pink", "white", "brown", "gray", "chocolate", "purple", "black", "red", "yellow", "orange",
+           "green"],
+          ["tapering", "enlarging"],
+          ["bulbous", "Missing[]", "equal", "club", "rooted"],
+          ["smooth", "silky", "fibrous", "scaly"],
+          ["smooth", "silky", "fibrous", "scaly"],
+          ["white", "pink", "gray", "brown", "buff", "orange", "red", "cinnamon", "yellow"],
+          ["white", "pink", "gray", "brown", "buff", "orange", "red", "cinnamon", "yellow"],
+          ["partial"],
+          ["white", "brown", "orange", "yellow"],
+          ["one", "two", "none"],
+          ["pendant", "evanescent", "large", "flaring", "none"],
+          ["white", "brown", "black", "chocolate", "green", "yellow", "buff", "purple", "orange"],
+          ["several", "solitary", "scattered", "numerous", "abundant", "clustered"],
+          ["woods", "grasses", "paths", "leaves", "urban", "meadows", "waste"]]
+
+WINE
+
+n_attr = 11
+ranges = [[4.6, 15.9],
+         [0.12,1.58],
+         [0.0,1.0],
+         [0.9,15.5],
+         [0.012,0.611],
+         [1.0,72.0],
+         [6.0,289.0],
+         [0.99007,1.00369],
+         [2.74,4.01],
+         [0.33,2.0],
+         [8.4,14.9]]
+
+ADULT
+
+n_attr = 13
+indexes_adult = [4,7,8,9,10,12]
+adult = pd.read_csv("adult/adult.csv")
+rules = associationRules.rules(adult,0.4,0.9)
+ranges = [[17,90],
+         [' Private', ' State-gov', ' Self-emp-not-inc', ' Local-gov', ' Federal-gov',' Self-emp-inc', ' Without-pay'],
+         [19214, 1085515],
+         [' HS-grad', '10th', ' Bachelors', ' Assoc-acdm', ' Some-college', ' Doctorate',' Prof-school', '9th', ' Assoc-voc', ' Masters', '7th-8th', '11th', '1st-4th','5th-6th', '12th', ' Preschool'],
+         [' Married-civ-spouse', ' Divorced', ' Never-married', ' Widowed',' Separated', ' Married-spouse-absent', ' Married-AF-spouse'],
+         [' Transport-moving', ' Craft-repair', ' Sales', ' Adm-clerical',' Prof-specialty', ' Other-service', ' Exec-managerial', ' Farming-fishing',' Machine-op-inspct', ' Handlers-cleaners', ' Protective-serv',' Tech-support', ' Priv-house-serv', ' Armed-Forces'],
+         [' Husband', ' Not-in-family', ' Wife', ' Own-child', ' Unmarried',' Other-relative'],
+         [' White', ' Black', ' Other', ' Asian-Pac-Islander', ' Amer-Indian-Eskimo'],
+         [' Male', ' Female'],
+         [0,  99999],
+         [0,4356],
+         [1,99],
+         [' United-States', ' Portugal', ' Cuba', ' Mexico', ' France', ' Jamaica',' Haiti', ' Honduras', ' India', ' Dominican-Republic',' Outlying-US(Guam-USVI-etc)', ' South', ' Scotland', ' Italy', ' Germany',' Philippines', ' Vietnam', ' El-Salvador', ' Nicaragua', ' China',' Trinadad&Tobago', ' Puerto-Rico', ' Japan', ' Iran', ' Guatemala',' England', ' Poland', ' Canada', ' Cambodia', ' Greece', ' Thailand',' Ireland', ' Hong', ' Taiwan', ' Ecuador', ' Peru', ' Yugoslavia', ' Columbia',' Hungary', ' Laos']]
+
+USERS
+
+n_attr = 4
+indexes_users = [0,1,2,3]
+users = pd.read_csv("users/users.csv")
+rules = associationRules.rules(users,0.2,0.9)
+ranges = [["CT_range_1","CT_range_2","CT_range_3","CT_range_4"],["CU_range_1","CU_range_2","CU_range_3","CU_range_4"],["LT_range_1","LT_range_2","LT_range_3","LT_range_4"],["ECommerce","game","holiday","sport"]]
+n_clusters = 2
+eps = 3
+
+CANCER
+
+n_attr = 9
+indexes_cancer = [1,5,7,8]
+cancer = pd.read_csv("cancer/cancer.csv")
+rules = associationRules.rules(cancer,0.46,0.9)
+ranges = [[1,10],[1,10],[1,10],[1,10],[1,10],[1,10],[1,10],[1,10],[1,10]]
+n_clusters = 2
+eps = 1.55
+
+ANURAN
+
+n_attr = 22
+ranges = [[-0.25117915369486804,1.0],
+[-0.6730253839892391,1.0],
+[-0.436027557631229,1.0],
+[-0.472676234325039,1.0],
+[-0.636012475323151,0.752246414457802],
+[-0.410416976545143,0.9642398634907701],
+[-0.5389817004704279,1.0],
+[-0.576506174491891,0.551762446319163],
+[-0.5873134377533701,0.7380330995838709],
+[-0.9522656555578292,0.5227676626494699],
+[-0.9019888545705691,0.523032830793899],
+[-0.799441302280563,0.690888875000885],
+[-0.644115927164735,0.9457099431236831],
+[-0.5903802197621539,0.575748961119413],
+[-0.717155589773686,0.6689241977411079],
+[-0.498675403830133,0.670700003490928],
+[-0.421479728327128,0.681157095938629],
+[-0.759321553990284,0.614064394882577],
+[-0.680745390359785,0.574208973965989],
+[-0.361648778290323,0.46783062933753794],
+[-0.430811776008093,0.38979677275582997],
+[-0.37930432153352095,0.432206844444825]]
+n_clusters = 3
+eps = 4.5
+
+PLANTS
+
+n_attr = 69
+n_clusters = 2
+eps = 90
+ranges = [[],['al','mt','ny','pr','ma','ak','or','ca','ar','ct','az','tx','la','hi'
+ 'id','fl','co','va','nj','wy','nv','de','ok','ga','nc','nm','ut','ks'
+ 'wa','me','qc','gl','ia','ms','oh','sc','bc','md','il','nb','in','wi'
+ 'pa','nu','ky','vi','mi','mo','tn','on','ne','mn','ns'],['ar','ct','nan','or','ca','il','az','me','ga','id','co','fl','vi','nm','ms'
+ 'pr','mt','hi','ny','pa','ma','dc','tx','la','sc','de','mo','ok','nv'
+ 'mi','gl','ak','vt','wa','mb','tn','va','nt','ut','ks','md','ne','nd'
+ 'lb','nb','ky','nc','mn','ia','ns','bc','wy','wi','ab','in','nj','qc'
+ 'oh'],['de','nan','wa','co','mo','ca','ma','il','nv','mt','ks','ga','tx','dc','ar'
+ 'ok','ct','md','pr','id','la','ny','ia','me','vi','in','nm','hi','tn'
+ 'fl','ab','mn','az','nb','vt','ut','on','va','or','bc','nu','wy','nc'
+ 'mi','nh','mb','nj','nf','pe','yt','sc','ms','qc','nt','sd','ne','ky'
+ 'gl','pa','ri'],['dc','nan','bc','id','oh','co','qc','in','or','nv','nm','la','il','ct','tx'
+ 'de','ca','pr','mt','hi','ms','vi','ks','ma','me','sc','ut','ab','fl'
+ 'ga','nh','ar','wy','nc','ia','mn','nf','pa','md','wa','tn','ok','sd'
+ 'ny','nt','mi','ns','lb','nj','mo','fraspm','nu','ky','nb','ne','wv','yt'
+ 'on','wi'],['fl','il','nan','nf','mi','pa','ct','ia','ut','or','ok','ms','ne','in','de'
+ 'dc','vi','nm','ky','wa','mt','ga','sc','va','mo','nh','nj','ma','nv'
+ 'tx','id','me','md','bc','ks','la','vt','ca','ab','pe','co','wi','yt'
+ 'nt','pr','nc','hi','wy','nu','on','nb','ny','mn','qc','lb','mb','nd'
+ 'oh','gl'],['ga','in','nan','mt','tn','dc','ky','wa','wy','tx','nc','nv','ia','ks','fl'
+ 'md','bc','de','il','ut','la','nm','on','ny','mi','id','ma','nt','mn'
+ 'or','ms','wi','co','pa','me','ct','mo','nh','nu','vi','sc','ab','vt'
+ 'nd','va','nj','qc','nf','hi','pr','ne','yt','lb','mb','ns','ok','oh'
+ 'sd','nb'],['il','ia','nan','nv','wi','id','md','bc','sc','nm','fl','ga','ut','ms','me'
+ 'dc','in','wa','va','ks','or','ne','pa','mn','ab','mi','yt','nh','mt'
+ 'la','nc','ky','ct','ma','nd','ok','de','mo','ny','wy','nj','sd','qc'
+ 'fraspm','nt','oh','mb','tx','pr','sk','ri','vi','hi','tn','nf','nu','on'],['in','ks','nan','nm','il','ma','tx','ga','la','mo','md','fl','or','ia','wy'
+ 'ab','nc','nd','ut','vt','nh','bc','mt','mn','ny','nv','wa','ky','sc'
+ 'me','id','de','hi','ne','dc','nj','oh','sk','va','ok','wv','mi','nb'
+ 'yt','ms','ns','pa','sd','nu','pr','tn','gl','nt','lb','ri','nf','vi'
+ 'on','qc'],['ky','nan','or','in','mi','va','ut','il','md','nc','ma','ga','bc','sc','mn'
+ 'wa','ia','nd','nj','mt','nh','ok','pa','wy','me','tx','la','dc','nv'
+ 'tn','ks','ny','ri','hi','qc','ab','ns','gl','mo','lb','fl','ms','wi'
+ 'nm','sd','nf','on','ne','yt','pr','mb','nt','id','oh','vt','sk'],['la','me','nan','sd','ia','mo','ms','in','oh','mi','hi','wa','nt','tx','wy'
+ 'ks','mn','ok','bc','lb','ny','ne','nj','ky','tn','vt','nm','ab','md'
+ 'va','ma','fl','nv','nc','nh','id','or','ut','il','pr','on','ga','fraspm'
+ 'wi','qc','sc','pa','mb','vi','nf','wv','mt','pe','nd','sk','yt','gl'],['md','nan','ut','ks','nj','mo','mt','pa','mn','il','wy','yt','me','pr','ky'
+ 'ms','sd','on','nb','oh','nv','ny','wi','tx','bc','ma','mi','ia','ga'
+ 'la','nh','ab','or','wv','id','sc','tn','va','wa','in','mb','qc','nu'
+ 'ok','nc','ns','nm','sk','hi','nd','lb','vt','nf','nt','ne','vi','gl'],['ms','ma','nan','wa','me','ny','nj','ky','ne','nm','sc','mt','in','bc','md'
+ 'vi','mo','tx','nf','pa','nc','wy','or','nb','ut','mb','mi','la','mn'
+ 'ks','hi','ri','sd','id','il','wv','lb','ab','sk','ok','pr','on','yt'
+ 'oh','nu','nh','nd','tn','qc','va','nv','gl','ia','nt','wi','vt'],['mo','mi','nan','wy','md','nc','ny','la','nv','tn','nh','ks','ma','nm','ne'
+ 'ns','ri','nd','oh','ab','pa','nf','vt','sk','mn','me','nj','ky','id'
+ 'lb','ut','il','in','or','ms','va','wi','ia','mb','bc','sd','qc','gl'
+ 'sc','ok','tx','on','yt','wv','nb','mt','wa','fraspm','nt','nu','pr'],['nj','mn','nan','ab','ma','oh','md','me','va','ky','mo','bc','mi','nm','on'
+ 'vt','nd','ok','pa','ri','wa','ms','mt','ny','il','nc','mb','in','sd'
+ 'wv','ks','nt','la','ns','tx','wi','ia','tn','nh','sk','ut','qc','yt'
+ 'nv','or','sc','nf','pr','wy','ne','vi','lb'],['nc','mo','nan','bc','mi','pa','ok','ma','nm','md','wv','ny','la','nh','sk'
+ 'mn','qc','or','sc','lb','tn','pe','wi','mt','ne','in','ms','oh','nf'
+ 'wy','ia','ut','ky','ns','mb','me','on','vt','ks','tx','nv','nj','nd'
+ 'nb','pr','nt','yt','wa','fraspm','ri','vi','sd','va','ab'],['oh','ne','nan','nf','mn','sc','or','mi','ny','ma','nc','me','nh','nj','sd'
+ 'ms','wi','tn','mb','mt','vt','qc','wy','ia','nt','pa','ab','ks','on'
+ 'mo','la','nu','sk','md','ok','wv','ky','nm','vi','dengl','ut','va','tx'
+ 'yt','gl','nv','bc','ri','nd','nb'],['pa','nh','nan','on','mo','tn','nc','mi','nd','md','nj','ny','tx','ok','lb'
+ 'vt','nb','wv','sk','ab','mt','nv','mn','oh','ks','ms','nu','sc','bc'
+ 'ky','ne','wa','qc','ri','me','ma','wi','la','or','nm','sd','va','ns'
+ 'fraspm','wy','pr','gl','ut','mb','yt','dengl','pe','nf'],['sc','nj','nan','qc','mt','vt','tx','nh','nd','mn','oh','ma','ny','nc','ut'
+ 'ne','sd','mb','ri','va','nf','lb','bc','mo','ms','ok','ky','on','tn'
+ 'yt','la','nv','wi','pa','md','pe','mi','nb','me','wv','ab','nm','wa'
+ 'wy','ns','fraspm','vi','nt','sk'],['tn','ny','nan','ne','va','nj','or','ms','pa','mi','nc','oh','wi','nb','wa'
+ 'wv','nt','nm','lb','ok','mt','mo','nd','la','qc','tx','me','wy','sc'
+ 'nv','ma','ri','ns','nh','md','ut','fraspm','bc','sk','on','vt','pr','sd'
+ 'ab','nf','nu','mb'],['tx','nc','nan','nv','wv','ny','pa','mo','ri','mn','oh','ok','wy','nf','wi'
+ 'on','mb','nm','ne','sc','or','mt','me','nj','vt','sk','va','md','ms'
+ 'ab','tn','mi','yt','nd','nh','ma','ut','sd','qc','lb','bc','nt','pr'
+ 'nb'],['va','oh','nan','nh','wi','nc','tx','ne','sd','ms','pa','ns','wy','ab','mb'
+ 'qc','nb','ny','tn','nv','ri','ok','md','or','yt','wv','ma','nd','mo'
+ 'bc','mn','gl','nj','mi','wa','on','sc','vt','ut','mt','nm','pr','sk'
+ 'nu','fraspm','vi','lb','nf'],['wv','pa','nan','nj','on','bc','oh','ut','nh','pr','tn','mo','ri','nd','wi'
+ 'nu','ab','sk','pe','nt','nc','tx','sc','or','nv','ma','wa','gl','mi'
+ 'ok','nb','va','ms','mt','ny','nm','lb','mn','sd','vt','mb','wy','nf'
+ 'vi','ns','ne'],['nan','ri','nm','qc','on','pa','vt','nj','nv','sc','oh','wy','bc','yt','va'
+ 'tn','ny','ut','nh','mi','ok','wv','vi','mn','or','nf','mo','ne','nc'
+ 'nd','mb','ms','ab','wi','nt','lb','nb','sd','ns','sk','mt','tx'],['nan','sc','ny','qc','sd','wa','va','nh','tn','ok','pe','mb','or','dengl'
+ 'wv','vt','nc','ri','nj','mn','pa','wi','ms','nm','ns','ne','nd','oh'
+ 'nf','mo','ut','tx','sk','bc','wy','mt','nb','on','ab','gl','nu'],['nan','tn','nd','wv','nc','nj','vt','pa','qc','nt','fraspm','sk','wi','va'
+ 'sd','nm','ms','ri','sc','ab','nb','mo','ny','on','nh','tx','oh','ok'
+ 'ne','lb','wa','or','nu','mt','nf','pr','pe','ns','nv','yt','bc'],['nan','vt','oh','tx','wy','wi','nm','va','ri','sk','on','yt','wa','ny','mo'
+ 'sc','tn','bc','mt','nc','pe','nj','wv','ut','sd','ok','pa','nu','nd'
+ 'nv','ns','nb','nf','or','nh','ne','qc','gl','lb'],['nan','va','or','vt','ab','ok','wy','ny','wv','sc','dengl','sk','sd','gl'
+ 'wa','wi','nc','mt','tn','tx','lb','qc','ne','oh','nm','pa','ut','ri'
+ 'on','nh','pr','nf','mb','nt','pe','nj','nd','nu','nv','fraspm','nb','yt'],['nan','wv','pa','va','bc','ab','nc','wi','ns','sd','fraspm','yt','tn','ut'
+ 'wy','on','nd','ne','tx','vt','mb','nv','wa','or','ny','nb','ri','qc'
+ 'sc','ok','nj','vi','nm','oh','pe','nh','nf','sk'],['nan','wi','sd','wv','mb','ri','bc','oh','on','tn','vt','ab','nv','lb','va'
+ 'nb','nh','pa','tx','nc','ns','wa','sc','pr','sk','nm','or','ut','ny'
+ 'qc','nj','yt','nf','nd','fraspm','wy','pe'],['nan','nb','ut','on','sc','lb','ok','tx','va','wa','sd','bc','mb','nh','pr'
+ 'nf','nj','wy','ri','nd','wv','wi','vi','yt','ny','pe','pa','vt','qc'
+ 'nc','fraspm','nm','dengl','ns','oh','tn','ab','nt'],['nan','ns','vt','on','qc','sd','mb','or','wa','wi','tn','lb','nb','nj','nf'
+ 'vi','nm','bc','sc','oh','wv','wy','fraspm','va','nc','ab','ri','sk','nd'
+ 'ny','ok','pe','tx','dengl','pa','yt'],['nan','on','va','qc','sk','tn','nb','pa','wv','wy','ut','mb','nf','nm','ns'
+ 'ny','ok','tx','wi','bc','ab','vt','sd','nd','fraspm','gl','wa','yt','oh'
+ 'or','nc','sc','ri','dengl'],['nan','pe','wa','tx','nf','ri','wv','wi','ab','vt','nb','ns','ny','on','nc'
+ 'sk','pa','mb','sc','bc','ut','va','tn','oh','lb','wy','fraspm','ok','nd'
+ 'qc','or'],['nan','qc','wi','vt','nt','sc','wy','pr','bc','va','nf','on','sd','nc','pe'
+ 'nd','ri','nb','mb','wa','lb','tx','ok','ab','or','ut','oh','ns','wv'
+ 'pa'],['nan','wy','va','ns','tn','ab','bc','lb','wa','wv','pe','nd','qc','fraspm'
+ 'oh','on','sc','nf','nb','mb','vt','or','sd','ut','pa','ok','wi','sk'
+ 'pr','ri'],['nan','ab','wv','on','tx','bc','mb','wi','qc','ut','oh','dengl','ok','wa'
+ 'sk','sd','ns','nb','va','pa','nt','tn','nf','lb','vt','sc','or','fraspm'
+ 'wy','vi','nu','yt','ri'],['nan','bc','wi','pe','ut','qc','lb','nb','mb','sk','dengl','vt','ok'
+ 'fraspm','or','wv','tn','pr','on','nf','ri','ns','nt','wy','va','sd','wa'
+ 'tx','pa','gl','sc'],['nan','lb','mb','qc','vt','nf','wy','on','fraspm','va','or','pa','wi','tx'
+ 'vi','pe','ns','sk','nt','sc','ab','nb','wa','tn','wv','ri','bc','pr'
+ 'sd','dengl'],['nan','mb','nf','sk','va','nb','ns','nt','ab','qc','wa','pa','ri','bc','vt'
+ 'on','wy','sd','wi','tx','sc','tn','pr','nu','vi','wv','fraspm'],['nan','nb','ns','fraspm','wa','nf','on','bc','wv','ri','sc','va','sk','qc'
+ 'ab','tn','pe','mb','wy','nt','ut','sd','tx','vi','lb','wi'],['nan','nf','on','wv','nt','pe','mb','wi','sc','sd','bc','tx','yt','qc','nb'
+ 'ab','ns','vt','tn','sk','ut','pr','wa'],['nan','nt','pe','wi','ns','qc','nf','wy','sd','tn','lb','vt','sk','mb','bc'
+ 'nu','ut','va','tx','on','nb','ab','wv'],['nan','ns','qc','pr','on','sk','nt','bc','tn','tx','mb','va','fraspm','nb'
+ 'vt','wa','lb','wy','ut','pe','yt','nf','wi'],['nan','nu','fraspm','nb','pe','sk','on','tx','ut','mb','yt','wa','ns','nt'
+ 'va','wi','ab','vt','wv','qc','dengl','lb','nf','pr'],['nan','on','nf','qc','yt','ut','vt','ns','fraspm','wv','nb','wa','wy','bc'
+ 'va','wi','dengl','mb'],['nan','pe','ns','sk','vt','va','dengl','on','nt','wi','qc','wv','pr','nf'
+ 'nb','wa','lb','fraspm','mb','wy','nu'],['nan','qc','on','yt','va','wa','fraspm','pe','ns','pr','sk','wi','vi','nt'
+ 'nf','wy','wv','mb','ab','bc'],['nan','sk','pe','fraspm','wa','wv','qc','nu','nb','wy','mb','ns','nt','ab'
+ 'wi','bc','on'],['nan','yt','qc','wv','wi','gl','on','ns','ab','bc','wy','nb','nf','pr','sk'
+ 'lb','pe'],['nan','dengl','sk','wi','wy','pe','on','bc','qc','lb','ab','ns','nt','vi'
+ 'mb','yt'],['nan','fraspm','wy','ab','pr','qc','lb','sk','pe','mb','vi','bc','on','ns'
+ 'nb','dengl'],['nan','pr','bc','vi','sk','mb','yt','qc','ab','nb','lb','nu','nf','fraspm'],['nan','ab','mb','lb','yt','nb','fraspm','sk','bc','nf','on','ns','nt'],['nan','bc','nb','mb','dengl','nf','yt','ns','lb','pe','on'],['nan','lb','nf','mb','nb','fraspm','nt','dengl','on','qc','ns','pe','nu'],['nan','mb','nt','nb','nf','ns','fraspm','pe','sk','on','qc'],['nan','nb','ns','nf','nt','on','qc','yt','sk','pe'],['nan','nf','on','ns','pe','sk','nt','nu','dengl','qc'],['nan','nt','qc','on','nu','pe','fraspm','ns','sk'],['nan','ns','sk','pe','on','qc','yt'],['nan','nu','yt','qc','fraspm','sk','pe','on','dengl'],['nan','on','gl','sk','fraspm','qc','pe'],['nan','pe','fraspm','yt','sk','dengl','qc'],['nan','qc','gl','dengl','yt','fraspm','sk'],['nan','sk','fraspm','dengl','yt'],['nan','yt','fraspm'],['nan','dengl'],['nan','fraspm']]
