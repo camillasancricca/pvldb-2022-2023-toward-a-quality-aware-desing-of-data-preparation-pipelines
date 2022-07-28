@@ -33,4 +33,4 @@
 - ranking_validation.py: creates a csv table for the validation of a ranking given the set of performance scores extracted using main_parallel_validation.py
 
 ## Requirements
-You can find all the libraries used in this project in the requirements.txt.
+You can find all the libraries used in this project in the requirements.txt
