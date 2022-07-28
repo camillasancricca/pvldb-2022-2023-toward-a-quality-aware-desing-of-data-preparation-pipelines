@@ -1,5 +1,4 @@
 import random as rd
-#queste funzioni sono fatte per non interferire nella modifica di altri errori di qualità contemporaneamente, se si vogliono usare generali bisogna togliere i controlli sulle sovrapposizioni
 
 # imputing missing values
 
